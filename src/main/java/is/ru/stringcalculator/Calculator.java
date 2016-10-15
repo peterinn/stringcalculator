@@ -9,7 +9,12 @@ public class Calculator {
 		else if(text.contains(",")){
 			return sum(splitNumbers(text));
 		}
-		else
+		else if(text.contains("\n")){
+			return sum(splitnumbersbynewline(text));
+		}
+
+
+		else 
 			return 1;
 	}
 
@@ -18,10 +23,13 @@ public class Calculator {
 		return Integer.parseInt(number);
 	}
 
-	private static String[] splitNumbers(String numbers){
+	private static String[] splitNumbersbycomma(String numbers){
 	    return numbers.split(",");
 	}
-      
+    
+	private static String[] splitnumbersbynewline(String numbers){
+	    return numbers.split('\n');
+	} 
     private static int sum(String[] numbers){
  	    int total = 0;
         for(String number : numbers){
