@@ -5,7 +5,6 @@ import org.junit.Test;
 
 public class CalculatorTest {
 
-	public static void main(String args[]) {
   
 	@Test
 	public void testEmptyString() {
